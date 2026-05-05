@@ -1,4 +1,4 @@
 # https://developers.home-assistant.io/docs/add-ons/repository#repository-configuration
-name: Komga Add-On
-url: 'https://github.com/Nina-Syrina/Homeassistant-Addons'
-maintainer: Syrina <github@syrina.net>
+name: Mangas Add-Ons
+url: 'https://github.com/barchero/Homeassistant-Addons.git'
+maintainer: Barchero
