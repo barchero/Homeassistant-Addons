@@ -27,4 +27,3 @@ schema:
   address: str?
   port: port
   log_level: list(debug|info|warning|error)
-image: "ghcr.io/barchero/{arch}-addon-barista"
