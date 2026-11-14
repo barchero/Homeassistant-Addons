@@ -9,6 +9,7 @@ This repository contains the following add-ons
 
 ### [Komga add-on](./Komga)
 ### [Kavita add-on](./Kavita)
+### [Barista add-on](./barista)
 
 ![Supports aarch64 Architecture][aarch64-shield]
 ![Supports amd64 Architecture][amd64-shield]

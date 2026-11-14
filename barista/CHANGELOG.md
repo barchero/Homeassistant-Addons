@@ -1,0 +1,4 @@
+<!-- https://developers.home-assistant.io/docs/add-ons/presentation#keeping-a-changelog -->
+## 0.1.0
+
+- Initial release, based on https://github.com/asaf5767/barista
