@@ -1,0 +1,9 @@
+configuration:
+  address:
+    name: Coffee machine Bluetooth address
+    description: >-
+      Bluetooth (BLE) MAC address of your De'Longhi machine, e.g. 00:A0:50:XX:XX:XX.
+      Leave it empty and start the add-on to scan: the machines found are listed in the Log tab.
+  log_level:
+    name: Log level
+    description: Amount of detail written to the add-on log.

@@ -19,6 +19,12 @@ RUN apk add --no-cache --virtual .build-deps git build-base \
 # /data is the add-on's persistent storage: keep auto-brew schedules there
 RUN ln -s /data/auto_brew_schedules.json /app/barista/auto_brew_schedules.json
 
+# Ingress serves the UI under /api/hassio_ingress/<token>/, so make the UI call
+# the API relative to the page path instead of the site root ("/api/...").
+# Fails the build if upstream changes that line, instead of shipping a broken UI.
+RUN sed -i "s#const API = '';#const API = window.location.pathname.replace(/\\\\/\$/, '');#" /app/barista/ui/index.html \
+    && grep -q "const API = window.location.pathname" /app/barista/ui/index.html
+
 WORKDIR /app
 
 COPY run.sh /

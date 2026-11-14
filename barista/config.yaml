@@ -1,5 +1,5 @@
 name: "Barista"
-version: 0.1.0
+version: 0.2.0
 slug: "barista"
 description: "Control your De'Longhi ECAM coffee machine over Bluetooth with a Web UI and REST API."
 url: https://github.com/asaf5767/barista
@@ -14,16 +14,15 @@ boot: auto
 host_network: true
 host_dbus: true
 bluetooth: true
-webui: "http://[HOST]:[PORT:8080]"
-ports:
-  8080/tcp: 8080
-ports_description:
-  8080/tcp: "Web UI / REST API (host network, change with the 'port' option)"
+# Web UI inside Home Assistant (sidebar panel). barista always listens on 8080
+# on the host network, which also keeps the REST API reachable for automations.
+ingress: true
+ingress_port: 8080
+panel_icon: mdi:coffee
+panel_title: Barista
 options:
   address: ""
-  port: 8080
   log_level: info
 schema:
   address: str?
-  port: port
   log_level: list(debug|info|warning|error)

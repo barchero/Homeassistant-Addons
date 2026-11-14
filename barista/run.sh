@@ -6,7 +6,7 @@ set -e
 OPTIONS=/data/options.json
 
 ADDRESS="$(jq -r '.address // ""' "${OPTIONS}")"
-PORT="$(jq -r '.port // 8080' "${OPTIONS}")"
+PORT=8080  # fixed: must match ingress_port in config.yaml
 bashio::log.level "$(jq -r '.log_level // "info"' "${OPTIONS}")"
 
 if [ -z "${ADDRESS}" ]; then
